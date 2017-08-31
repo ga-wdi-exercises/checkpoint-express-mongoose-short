@@ -27,18 +27,18 @@ Are you up to the challenge? I hope so, did I mention this is a checkpoint?
   - Export the express application's variable
 
 - **Part 2**
-- Create a `connection` file in the db folder
-- Create a mongoose schema and model for `Author`
-- The `Author` model needs these properties:
-  - name, a string
-  - publisher, a string
-  - age, an integer
-  - active, a boolean
+  - Create a `connection` file in the db folder
+  - Create a mongoose schema and model for `Author`
+  - The `Author` model needs these properties:
+    - name, a string
+    - publisher, a string
+    - age, an integer
+    - active, a boolean
 
 - **Part 3**
-- In the `index`, load the new `connection` file to access it's database variable
-- Add mongoose functionality to CRUD routes (for create and update, expect the author properties to be namespaced under `author`)
-- The CRUD routes must respond with json data and read json data (if any) from the client/browser
+  - In the `index`, load the new `connection` file to access it's database variable
+  - Add mongoose functionality to CRUD routes (for create and update, expect the author properties to be namespaced under `author`)
+  - The CRUD routes must respond with json data and read json data (if any) from the client/browser
 
 
 ### When you are finished
