@@ -1,11 +1,10 @@
 # Checkpoint: Express & Mongoose
 
-
 ## Before You Start
 
-The test suite files are located in `./test`. To install everything you need to run the tests, run `npm install`.
+The test suite files are located in `./test`. **Before you begin anything, run `npm install`.**
 
-To run the tests in the terminal use `npm test`. *Unlike* the angular checkpoint, this test will only run once. Everytime you make a change and save your files, the test will need to be re-run manually.
+To run the tests in the terminal, run `npm test`. Every time you make a change and save your files, you will need to manually re-run the tests.
 
 A few files already exist in this repo. Examine them before you begin. You'll need to decide based on the specification, whether they should be kept as is or changed in *any* way.
 
@@ -13,7 +12,7 @@ A few files already exist in this repo. Examine them before you begin. You'll ne
 
 For this checkpoint you'll be taking on the role of **"The Fixer."** A previous developer was assigned to create a json api using Express and Mongoose, but left it (very) incomplete and quite a bit broken.
 
-Your mission, **Fixer**, is to follow the below specification and complete the api. Luckily there's a full test suite already written to validate the api's functionality...apparently the previous dev couldn't figure that out.
+Your mission is to follow the below specification and complete the api. Luckily there's a full test suite already written to validate the api's functionality... apparently the previous dev couldn't figure that out.
 
 Are you up to the challenge? I hope so, did I mention this is a checkpoint?
 
