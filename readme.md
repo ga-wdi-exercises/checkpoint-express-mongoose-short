@@ -23,5 +23,10 @@ Your application should have the following features:
 * A show view for a message that:
   * Shows the message body and author
 
+**NOTEs:**
+* You will need to add `module.exports = app` to the bottom of your `index.js` file for the tests to work.
+* You will need to use `app.use(bodyParser.json())` in addition to the way you use bodyParser for forms
+* If your tests don't exit, try hitting `ctrl-c`.
+
 ### When you are finished
 Commit your work, push to GitHub and make a Pull Request.

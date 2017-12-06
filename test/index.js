@@ -50,7 +50,7 @@ describe("Setup -", () => {
   });
 
   it("should have an index handlebars template", done => {
-    let reqIndexView = () => req('../views/index.hbs')
+    let reqIndexView = () => require('../views/index.hbs')
 
     expect(reqIndexView).to.not.throw()
     expect(reqIndexView).not.to.be.undefined;
@@ -90,7 +90,8 @@ describe("Model -", () => {
   before(done => {
     mongoose = require("../db/connection");
     Message = mongoose.model("Message");
-    app = require("../index.js");    
+    app = require("../index.js");
+    done()
   })
   
   beforeEach(done => {
@@ -141,7 +142,7 @@ describe("Model -", () => {
 
     Message.create({
       author: "Whinnie The Pooh",
-      message: "Honey!"
+      body: "Honey!"
     }).then(message => {
       expect(message).not.to.be.undefined;
       expect(message).to.be.an("object");
@@ -164,7 +165,8 @@ describe("Routes -", () => {
   before(done => {
     mongoose = require("../db/connection");
     Message = mongoose.model("Message");
-    app = require("../index.js");    
+    app = require("../index.js");   
+    done() 
   })
  
   beforeEach(done => {
