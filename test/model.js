@@ -41,10 +41,10 @@ describe('Model -', () => {
     done()
   })
 
-  it('should have an message property', done => {
+  it('should have an body property', done => {
     let Message = mongoose.model('Message')
     
-    expect(Message.schema.obj).to.have.property('message')
+    expect(Message.schema.obj).to.have.property('body')
     done()
   })
 
@@ -57,9 +57,9 @@ describe('Model -', () => {
     }).then(message => {
       expect(message).not.to.be.undefined
       expect(message).to.be.an('object')      
-      expect(message.message).not.to.be.undefined
+      expect(message.body).not.to.be.undefined
       expect(message.author).not.to.be.undefined
-      expect(message.message).to.be.a('string')
+      expect(message.body).to.be.a('string')
       expect(message.author).to.be.a('string')    
       done()
     })

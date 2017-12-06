@@ -6,39 +6,22 @@ The test suite files are located in `./test`. **Before you begin anything, run `
 
 To run the tests in the terminal, run `npm test`. Every time you make a change and save your files, you will need to manually re-run the tests.
 
-A few files already exist in this repo. Examine them before you begin. You'll need to decide based on the specification, whether they should be kept as is or changed in *any* way.
-
 ## Instructions
 
-For this checkpoint you'll be taking on the role of **"The Fixer."** A previous developer was assigned to create a json api using Express and Mongoose, but left it (very) incomplete and quite a bit broken.
+For this checkpoint, you need to build a simple message board application. You will have a single model, Messages, with two properties: an Author and a Body.
 
-Your mission is to follow the below specification and complete the api. Luckily there's a full test suite already written to validate the api's functionality... apparently the previous dev couldn't figure that out.
+We've provided a `package.json` file with the dependencies to run your tests; you will need to install everything else necessary to build your application server with Express and Mongoose.
 
-Are you up to the challenge? I hope so, did I mention this is a checkpoint?
+Your application should have the following features:
 
-## Specification
-
-- **Part 1**
-  - Create our express server in an `index` file at the project root
-  - Create `CRUD` routes for `Authors` via the `/authors` path (these just need to respond successfully to web requests for now).
-  - Use `_id` to identify author objects in the url.
-  - Make sure to start the server at port 4000
-  - Export the express application's variable
-
-- **Part 2**
-  - Create a `connection` file in the db folder
-  - Create a mongoose schema and model for `Author`
-  - The `Author` model needs these properties:
-    - name, a string
-    - publisher, a string
-    - age, an integer
-    - active, a boolean
-
-- **Part 3**
-  - In the `index`, load the new `connection` file to access it's database variable
-  - Add mongoose functionality to CRUD routes (for create and update, expect the author properties to be namespaced under `author`)
-  - The CRUD routes must respond with json data and read json data (if any) from the client/browser
-
+* A home page ('/') that:
+  * lists the most recently pushlished messages
+  * has a link to create a new message
+* A view for creating a new message that:
+  * has a form for creating a new form
+  * submits that form to your server to save the new message in your MongoDB database
+* A show view for a message that:
+  * Shows the message body and author
 
 ### When you are finished
 Commit your work, push to GitHub and make a Pull Request.

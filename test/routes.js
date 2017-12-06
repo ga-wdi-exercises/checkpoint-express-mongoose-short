@@ -18,7 +18,7 @@ describe('Routes -', () => {
         Message.remove({}).then(() => {
             Message.create({
                 "author": "Whinnie The Pooh",
-                "message": "Honey!"
+                "body": "Honey!"
             }).then(() => done())
         })
       })
@@ -56,7 +56,7 @@ describe('Routes -', () => {
                     .get('/')
                     .end((err, res) => {
                         expect(res.text).to.contain(message.author)
-                        expect(res.text).to.contain(message.message)
+                        expect(res.text).to.contain(message.body)
                         done()
                     })
             })
@@ -91,16 +91,16 @@ describe('Routes -', () => {
                 .post('/messages')
                 .send({ message: {
                         author: "Christopher Robin",
-                        message: "Where is Pooh Bear?"
+                        body: "Where is Pooh Bear?"
                     }
                 })
                 .end((err, res) => {
                     Message.findOne({author: "Christopher Robin"})
                         .then(message => {
                             expect(message.author).not.to.be.undefined
-                            expect(message.message).not.to.be.undefined
+                            expect(message.body).not.to.be.undefined
                             expect(message.author).to.equal("Christopher Robin")
-                            expect(message.message).to.equal("Where is Pooh Bear?")
+                            expect(message.body).to.equal("Where is Pooh Bear?")
                             done()
                         })
                 })
@@ -112,7 +112,7 @@ describe('Routes -', () => {
                 .send({
                     message: {
                         author: "Christopher Robin",
-                        message: "Where is Pooh Bear?"
+                        body: "Where is Pooh Bear?"
                     }
                 })
                 .end((err, res) => {
@@ -141,7 +141,7 @@ describe('Routes -', () => {
                     .get(`/messages/${message._id}`)
                     .end((err, res) => {
                         expect(res.text).to.contain(message.author)
-                        expect(res.text).to.contain(message.message)
+                        expect(res.text).to.contain(message.body)
                         done()
                     })
             })
