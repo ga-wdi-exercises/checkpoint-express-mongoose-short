@@ -14,18 +14,18 @@ We've provided a `package.json` file with the dependencies to run your tests; yo
 
 Your application should have the following features:
 
-* A home page ('/') that:
+* A home page that:
   * lists the most recently pushlished messages
   * has a link to create a new message
 * A view for creating a new message that:
-  * has a form for creating a new form
+  * has a form for creating a new message
   * submits that form to your server to save the new message in your MongoDB database
 * A show view for a message that:
   * Shows the message body and author
 
 **NOTEs:**
 * You will need to add `module.exports = app` to the bottom of your `index.js` file for the tests to work.
-* You will need to use `app.use(bodyParser.json())` in addition to the way you use bodyParser for forms
+* You will need to use `app.use(bodyParser.json())` in addition to the way you use bodyParser to process form submissions
 * If your tests don't exit, try hitting `ctrl-c`.
 
 ### When you are finished
