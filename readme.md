@@ -30,5 +30,8 @@ Your application should have the following features:
 * You will need to use `app.use(bodyParser.json())` in addition to the way you use bodyParser to process form submissions
 * If your tests don't exit, try hitting `ctrl-c`.
 
-### When you are finished
-Commit your work, push to GitHub and make a Pull Request.
+## Submission
+
+Fork this repository and clone your fork locally. Commit as you go. When you are finished, push to GitHub.
+
+**Wait until the end of the hour to make your Pull Request**
