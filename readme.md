@@ -1,5 +1,7 @@
 # Checkpoint: Express & Mongoose
 
+You may use outside resources during this checkpoint.
+
 ## Before You Start
 
 The test suite is located in `./test`. **Before you begin anything, run `npm install`.**
