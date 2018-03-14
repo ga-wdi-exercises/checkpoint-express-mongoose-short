@@ -1,0 +1,19 @@
+<h1>Notes</h1>
+
+
+  <div id="add notes">
+      <form action="/notes/new" method="add">
+        <button onclick="text">Add Notes</button>
+      </form>
+  </div>
+
+  <section class="blog_list">
+  {{#each notes}}
+  <a href="/notes/{{id}}" class="blog-list-details">
+    <div class="note-content">
+          <p>{{author}} -  {{title}}</p>
+    </div>    
+  </a> 
+  {{/each}}
+ 
+</section>
