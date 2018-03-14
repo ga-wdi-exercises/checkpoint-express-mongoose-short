@@ -1,0 +1,11 @@
+<div class="container">
+    <ul>
+        {{#each notes}}
+        <li>
+            <a href="/notes/{{this.id}}">{{title}}</a>
+            <p>{{author}}</p>
+            <p>{{body}}</p>
+        </li>
+        {{/each}}
+    </ul>
+</div>
