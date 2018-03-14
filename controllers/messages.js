@@ -10,4 +10,12 @@ router.get('/', (req, res) => {
       .catch(err => console.log(err))
 })
 
+router.get('/:id', (req, res) => {
+  Note.findOne({ _id: req.params.id })
+    .then(notes => {
+      res.render('notes/show', notes);
+    })
+    .catch(err => console.log(err))
+});
+
 module.exports = router
