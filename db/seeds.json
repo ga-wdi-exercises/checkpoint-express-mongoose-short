@@ -1,0 +1,22 @@
+[
+  {
+    "author": "Hyojin",
+    "title": "CoderOne",
+    "body": "This is a body of a book."
+  },
+  {
+    "author": "Zakk",
+    "title": "CoderTwo",
+    "body": "This is a body of a book, too."
+  },
+  {
+    "author": "Perry",
+    "title": "CoderThree",
+    "body": "This is a body of a book as well."
+  },
+  {
+    "author": "Meg",
+    "title": "CoderFour",
+    "body": "This is a body of a book. This is a body of a book."
+  }
+]

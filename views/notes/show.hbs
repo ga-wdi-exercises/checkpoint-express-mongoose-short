@@ -1,0 +1,8 @@
+<p>{{this.author}}</p>
+<p>{{this.title}}</p>
+<p>{{this.body}}</p>
+
+<a href="/notes/edit/{{this.id}}">Edit</a>
+<form action="/notes/{{id}}?_method=delete" method="POST">
+    <input type="submit" value="Delete">
+</form>
