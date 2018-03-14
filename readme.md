@@ -19,7 +19,7 @@ We've provided a `package.json` file with the dependencies to run your tests; yo
 Your application should have the following features:
 
 * A home page that:
-  * lists the most recently pushlished Notes
+  * lists the most recently published Notes
 * A show view for a Note that:
   * Shows the Note title, body and author
 
