@@ -6,4 +6,4 @@ const Note = new mongoose.Schema({
   body: String
 })
 
-module.exports = mongoose.model('Note', Note)
+module.exports = mongoose.model('Notes', Note)
