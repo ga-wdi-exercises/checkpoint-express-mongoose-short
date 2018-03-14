@@ -1,0 +1,12 @@
+<h1> Notes </h1>
+
+<ul>
+    {{#each notes}}
+    <li>
+        <a href="/notes/{{this.id}}">{{this.title}}</a>
+        <p>Author: {{this.author}}</p>
+    </li>
+    {{/each}}
+</ul>
+
+</div>
