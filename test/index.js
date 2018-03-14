@@ -6,6 +6,9 @@ const package = require("../package.json");
 
 chai.use(http);
 
+beforeAll(model);
+beforeAll(routes);
+
 describe("Setup -", () => {
   beforeEach(done => {
     done();
