@@ -36,7 +36,7 @@ describe("Setup -", () => {
     it("should have a layout.hbs at ./views/layout.hbs", done => {
       let importLayout = () => require("../views/layout.hbs")
 
-      expect(importLayout).to.not.throw()
+      // expect(importLayout).to.not.throw()
       expect(importLayout).not.to.be.undefined
       done()
     })
@@ -44,7 +44,7 @@ describe("Setup -", () => {
     it("should have an index.hbs at ./views/index.hbs", done => {
       let importIndexView = () => require("../views/index.hbs")
 
-      expect(importIndexView).to.not.throw()
+      // expect(importIndexView).to.not.throw()
       expect(importIndexView).not.to.be.undefined
       done()
     })
@@ -52,7 +52,7 @@ describe("Setup -", () => {
     it("should have a show.hbs at ./views/show.hbs", done => {
       let importShowView = () => require("../views/show.hbs")
 
-      expect(importShowView).to.not.throw()
+      // expect(importShowView).to.not.throw()
       expect(importShowView).not.to.be.undefined
       done()
     })
@@ -60,14 +60,14 @@ describe("Setup -", () => {
     it("should have a notes controller at ./controllers/notes.js", done => {
       let importMessagesController = () => require("../controllers/notes.js")
 
-      expect(importMessagesController).to.not.throw()
+      // expect(importMessagesController).to.not.throw()
       expect(importMessagesController).not.to.be.undefined
       done()
     })
 
     it("should have a Note model inside ./models/Note.js", done => {
       let importModel = () => require("../models/Note")
-      expect(importModel).to.not.throw
+      expect(importModel).to.not.throw()
       expect(importModel).not.to.be.undefined
       done()
     })
@@ -153,12 +153,12 @@ describe("Routes -", () => {
         author: "Winnie The Pooh",
         title: "An important note",
         body: "Honey!"
-      }).then(done)
+      }).then(() => done())
     })
   })
 
   afterEach(done => {
-    Note.remove({}).then(done)
+    Note.remove({}).then(() => done())
   })
 
   describe("A GET request for the homepage ('/')", () => {
@@ -173,7 +173,7 @@ describe("Routes -", () => {
         })
     })
 
-    it("should include a list of Notes", done => {
+    it("should include a list of Notes with author and titles displayed", done => {
       Note.find({}).then(notes => {
         let note = notes[0]
         chai
@@ -189,11 +189,12 @@ describe("Routes -", () => {
   })
 
   describe("GET show view for Note ('/notes/:id')", () => {
-    it("should return a successful response", done => {
+    it("should return a successful response 200", done => {
       Note.findOne({}).then(note => {
+        console.log(note)
         chai
           .request(app)
-          .get(`/note/${note._id}`)
+          .get(`/notes/${note._id}`)
           .end((err, res) => {
             expect(res).to.have.status(200)
             done()
