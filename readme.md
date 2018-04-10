@@ -24,17 +24,22 @@ For this checkpoint, you need to build a simple application for tracking Notes.
 
 ### Requirements
 
-You will have a single model, `Note`, with three fields: an `author`, a `title` and a `body`.
+1. There is already a `package.json` file with the dependencies necessary for running the tests. Install everything else required to build your application server with Express, Mongoose, and Handlebars (use `hbs` instead of `express-handlebars`).
 
-You will also to create the following directories `controllers` and `views`. The names must match these exactly, so be careful to pluralize.
+2. Create the following directories `controllers` and `views`. The names must match these exactly, so be careful to pluralize.
 
-There is already a `package.json` file with the dependencies necessary for running the tests. You will need to install everything else necessary to build your application server with Express, Mongoose, and Handlebars (use `hbs` instead of `express-handlebars`).
+3. There will be a single model, `Note`, with three fields: an `author`, a `title` and a `body`.
 
-Your application should have the following features...
+4. You should have 3 routes...
+  - `GET '/'` which should redirect to `/notes'
+  - `GET '/notes'` which render view with a list of notes
+  - `GET '/notes/:someParameter'` where `:someParameter` can be used to identify or grab a single `Note` from the database.
 
-* A handlebars layout file named `views/layout.hbs`.
-* A `views/index.hbs` lists the most recently published Notes, **showing the `title` and `author` of each `Note`**.
-* A show view (`views/show.hbs`) for a `Note` that, **displays the `Note`'s `title`, `body` and `author`**.
+5. Your application should have the following views...
+
+  - A handlebars layout file named `views/layout.hbs`.
+  - A `views/index.hbs` lists the most recently published Notes, **showing the `title` and `author` of each `Note`**.
+  - A show view (`views/show.hbs`) for a `Note` that, **displays the `Note`'s `title`, `body` and `author`**.
 
 **NOTES:**
 
