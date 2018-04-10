@@ -1,27 +1,37 @@
 # Checkpoint: Express & Mongoose
 
-You may use outside resources during this checkpoint.
+You may use lesson plans for guidance during this checkpoint, such as the [Express MVC lesson plan](https://git.generalassemb.ly/ga-wdi-lessons/express-mongoose).
 
-## Before You Start
+## Set Up
 
-The test suite is located in `./test`. **Before you begin anything, run `npm install`.**
+Fiork and clone this repository. After cloning down **your fork**...
 
-To run the tests in the terminal, run `npm test`. Every time you make a change and save your files, you will need to manually re-run the tests. When you start, all of the tests will be failing; your goal is to make as many pass as you can in the hour provided.
+```bash
+ $ cd checkpoint-express-mongoose-short
+ $ npm install
+```
 
-> HINT: read the output of the failing tests. It will tell you why the test failed.
+To run the tests in the terminal, run `npm test`.
+  - Every time you make a change and save your files, you will need to manually re-run the tests.
+  - When you start, all of the tests will be failing; your goal is to make as many pass as you can in the hour provided.
+  - Read the output of the failing tests. It will tell you why the test failed.
 
-## Instructions
+> Note: The test suite is located in `./test`. 
 
-For this checkpoint, you need to build a simple application for tracking Notes. You will have a single model, `Note`, with three properties: an Author, a Title and a Body.
+## Requirements
 
-We've provided a `package.json` file with the dependencies to run your tests; you will need to install everything else necessary to build your application server with Express, Mongoose, and Handlebars.
+For this checkpoint, you need to build a simple application for tracking Notes. You will have a single model, `Note`, with three fields: an `author`, a `title` and a `body`.
 
-Your application should have the following features:
+You will also to create the following directories `controllers` and `views`. The names must match these exactly, so be careful to pluralize.
 
-* A home page that:
-  * lists the most recently pushlished Notes
-* A show view for a Note that:
-  * Shows the Note title, body and author
+There is already a `package.json` file with the dependencies to run the tests. you will need to install everything else necessary to build your application server with Express, Mongoose, and Handlebars (use `hbs` instead of `express-handlebars`).
+
+Your application should have the following features...
+
+* A handlebars layout file named `views/layout.hbs`.
+* A `views/index.hbs` lists the most recently published Notes, **showing the `title` and `author` of each `Note`**.
+* A show view (`views/show.hbs`) for a `Note` that:
+  * **Displays the `Note`'s `title`, `body` and `author`**.
 
 **NOTES:**
 
