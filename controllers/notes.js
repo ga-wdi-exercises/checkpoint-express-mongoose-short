@@ -5,8 +5,10 @@ const Note = mongoose.model('Note')
 
 router.get('/', (req, res) => {
     Note.find({})
-      .then( (data) => console.log(data))
-    res.render('index')
+        .then( (notes) => {
+            console.log(notes)
+            res.render('index', { notes } )
+        })
 })
 
 module.exports = router

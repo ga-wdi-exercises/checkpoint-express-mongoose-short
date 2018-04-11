@@ -1,1 +1,18 @@
 <p>Hello world</p>
+
+<table>
+  {{#each notes as |note|}}
+  <tr>
+    <td>
+        <li>Author {{ note.author }} </li>
+    </td>
+    <td>
+        <li>Title {{ note.title }} </li>
+    </td>
+    <td>
+        <li>Body {{ note.body }} </li>
+    </td>
+  </tr>
+  {{/each}}
+</table>
+<br>
