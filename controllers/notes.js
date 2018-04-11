@@ -1,5 +1,3 @@
-import { model } from 'mongoose';
-
 const express = require('express')
 const router = express.Router()
 const Notes = require('../models/Note')

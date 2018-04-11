@@ -1,0 +1,9 @@
+<h1>Notes</h1>
+
+<ul>
+  {{#each Notes}}
+  <li>
+    <a href="/{{this.id}}">{{this.title}} - {{this.author}}</a>
+  </li>
+  {{/each}}
+</ul>
