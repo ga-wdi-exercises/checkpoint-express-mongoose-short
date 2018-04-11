@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     .then(notes => res.render('index', {notes}))
 })
 
-router.get('/notes/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   Notes.findOne({_id: req.params.id})
     .then(note => res.render('show', {note}))
 })
