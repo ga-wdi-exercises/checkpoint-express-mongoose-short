@@ -1,0 +1,17 @@
+[
+  {
+    "author":"Matt Sharpe",
+    "title":"Lab notes",
+    "body":"Here are some notes about authentication using express"
+  },
+  {
+    "author":"Paige Sharpe",
+    "title":"Legal stuff",
+    "body":"Some lawyerly stuff that is very important"
+  },
+  {
+    "author":"Penny and Bear Sharpe",
+    "title":"Woof",
+    "body":"Woof! Woof! Woof!"
+  }
+]
