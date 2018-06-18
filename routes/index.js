@@ -15,3 +15,6 @@ app.get('/notes', (req, res) => {
 app.get('/notes/:someParameter', (req, someParameter) => {
   res.get('notes') 
 })
+
+
+module.exports = router
