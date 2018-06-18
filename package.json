@@ -14,6 +14,11 @@
     "chai": "*",
     "chai-http": "^3.0.0",
     "mocha": "*",
-    "mocha-junit-reporter": "*"
+    "mocha-junit-reporter": "*",
+    "express": "*",
+    "express-handlebars": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+
   }
 }
