@@ -1,0 +1,21 @@
+<h2>This is where you can find information regarding Notes</h2>
+
+
+    <label>Notes:</label>
+
+    
+{{#if notes.length}}
+  {{#each notess}}
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">
+          {{ content }}
+        </span>
+      </div>
+      <div class="card-action">
+        <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a>
+        <span class="note__date">{{ createdAt }}</span>
+      </div>
+    </div>
+  {{/each}}
+{{/if}}

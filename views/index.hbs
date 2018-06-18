@@ -1,0 +1,11 @@
+{{!-- /* lists the most recently published Notes, showing the title and author of each Note.  --}}
+<h1>Here are your notes</h1>
+
+<ul>
+  {{#each notes}}
+    <li><a href="/{{this.title}}">{{this.author}}</a> - <a href="edit/{{this.title}}">Edit</a></li>
+  {{/each}}
+</ul>
+
+<a href="/new">New</a>
+
