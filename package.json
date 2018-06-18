@@ -9,16 +9,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "chai": "*",
     "chai-http": "^3.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.11",
     "mocha": "*",
     "mocha-junit-reporter": "*",
-    "express": "*",
-    "express-handlebars": "*",
-    "mongodb": "*",
-    "mongoose": "*",
-
+    "mongodb": "^3.0.10",
+    "mongoose": "^5.1.5"
   }
 }
