@@ -1,8 +1,16 @@
 const chai = require("chai")
 const expect = require("chai").expect
 const http = require("chai-http")
+const handlebars = require('handlebars');
+const fs = require('fs');
 
 const package = require("../package.json")
+
+// this is mandatory, else you get syntax errors on require('*.hbs')
+require.extensions['.hbs'] = function (module, filename) {
+  module.exports = handlebars.compile;
+  let raw = fs.readFileSync(filename).toString();
+}
 
 chai.use(http)
 
@@ -34,33 +42,29 @@ describe("Setup -", () => {
 
   describe("The project file structure ", () => {
     it("should have a layout.hbs at ./views/layout.hbs", done => {
-      let importLayout = () => require("../views/layout.hbs")
+      let importLayout = require("../views/layout.hbs")
 
-      // expect(importLayout).to.not.throw()
       expect(importLayout).not.to.be.undefined
       done()
     })
 
     it("should have an index.hbs at ./views/index.hbs", done => {
-      let importIndexView = () => require("../views/index.hbs")
+      let importIndexView = require("../views/index.hbs")
 
-      // expect(importIndexView).to.not.throw()
-      expect(importIndexView).not.to.be.undefined
+      expect(importIndexView).to.not.be.undefined
       done()
     })
 
     it("should have a show.hbs at ./views/show.hbs", done => {
-      let importShowView = () => require("../views/show.hbs")
+      let importShowView = require("../views/show.hbs")
 
-      // expect(importShowView).to.not.throw()
       expect(importShowView).not.to.be.undefined
       done()
     })
 
     it("should have a notes controller at ./controllers/notes.js", done => {
-      let importMessagesController = () => require("../controllers/notes.js")
+      let importMessagesController = require("../controllers/notes.js")
 
-      // expect(importMessagesController).to.not.throw()
       expect(importMessagesController).not.to.be.undefined
       done()
     })
@@ -136,7 +140,7 @@ describe("Model -", () => {
 })
 
 describe("Routes -", () => {
-  this.timeout = 1000
+  this.timeout = 2000
 
   let Note
   let app
@@ -172,7 +176,9 @@ describe("Routes -", () => {
           done()
         })
     })
+  })
 
+  describe("A GET request for /notes", () => {
     it("should include a list of Notes with author and titles displayed", done => {
       Note.find({}).then(notes => {
         let note = notes[0]
