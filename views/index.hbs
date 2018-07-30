@@ -1,0 +1,12 @@
+<h1>indexview</h1>
+
+<ul>
+ {{#each notes}}
+   <div>
+     <a href="/notes/{{this.id}}">
+       <li class="inline">{{this.title}}</li>
+       <li class="inline">{{this.author}}</li>
+     <a/>
+   </div>
+ {{/each}}
+</ul>
