@@ -1,0 +1,36 @@
+<p class="note">
+  {{> 'note'}}
+</p>
+
+{{#if comments.length}}
+  {{#each comments}}
+    <div class="note">
+      <div class="note-content">
+        <span class="note-title">
+          {{ content }}
+        </span>
+      </div>
+      <div class="card-action">
+        <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a>
+        <span class="note__date">{{ createdAt }}</span>
+      </div>
+    </div>
+  {{/each}}
+{{/if}}
+
+{{#if currentUser}}
+<div class="note">
+  <div class="note-content">
+    <h4 class="note-title">Add comments:</h6>
+    <form method="POST" action="/note/{{id}}?_method=PUT" class="row">
+      <p class="input-field inline col s10">
+        <label for="content"></label>
+        <input type="text" name="content" id="">
+      </p>
+      <p class="input-field inline col s2">
+        <input class="btn" type="submit" value="Submit">
+      </p>
+    </form>
+  </div>
+</div>
+{{/if }}
