@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const tweetController = require("../controllers/note");
+const noteController = require("../controllers/note");
 
 router.post("/", noteController.create);
 router.get("/new", noteController.new);
