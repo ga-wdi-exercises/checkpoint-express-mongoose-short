@@ -1,19 +1,35 @@
 {
   "name": "checkpoint-express-mongoose",
   "version": "1.0.0",
-  "description": "",
+  "description": "You may use lesson plans for guidance during this checkpoint, such as the [Express MVC lesson plan](https://git.generalassemb.ly/ga-wdi-lessons/express-mongoose).",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --exit test/*.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "josh pearson",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "hbs": "^4.0.1",
+    "mongoose": "^5.2.5",
+    "nodemon": "^1.18.3"
+  },
   "devDependencies": {
     "chai": "*",
     "chai-http": "^3.0.0",
     "mocha": "*",
     "mocha-junit-reporter": "*"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jnpearson4850/checkpoint-express-mongoose-short.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jnpearson4850/checkpoint-express-mongoose-short/issues"
+  },
+  "homepage": "https://github.com/jnpearson4850/checkpoint-express-mongoose-short#readme"
 }

@@ -1,0 +1,19 @@
+<div class="note">
+  <div class="note-content">
+    <a class="note-title" href="/tweet/{{id}}">
+      {{ content }}
+    </a>
+  </div>
+  <div class="author-action">
+    <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a>
+    <span class="note__date">{{ createdAt }}</span>
+    <span class="note_comments">{{ comments.length }} Comments</span>
+
+<form class="" action="/note/{{id}}?_method=DELETE" method="POST">
+<button type="submit" name="button">DELETE</button>
+</form>
+
+
+
+  </div>
+</div>
