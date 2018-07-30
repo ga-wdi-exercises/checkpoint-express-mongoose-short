@@ -9,7 +9,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "hbs": "^4.0.1",
+    "mongoose": "^5.2.5",
+    "nodemon": "^1.18.3"
+  },
   "devDependencies": {
     "chai": "*",
     "chai-http": "^3.0.0",
