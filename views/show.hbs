@@ -1,0 +1,9 @@
+ {{#if note}}
+    <div class="Notes">
+      {{#each note}}
+         {{> 'note'}}
+      {{/each}}
+    </div>
+  {{else}}
+    <p>No notes yet</p>
+  {{/if}}
