@@ -1,9 +1,7 @@
 const express = require("express");
-const hbs = require("hbs");
-const bodyParser = require("body-parser");
-
 const app = express();
-app.use(express.static("public"));
+
+app.set('views' __dirname + '/views');
 app.set("view engine", "hbs");
 
 
