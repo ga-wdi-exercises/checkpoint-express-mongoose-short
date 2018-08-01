@@ -1,6 +1,14 @@
-const User = require("../models/Note");
-const { Note } = require("../models/Note");
-
+const Note = require("../models/Note")
 module.exports = {
-    new: (req, res) => {
-        res.render("note/new");
+    index: function (req, res) {
+        Note.find({})
+        .then(notes) => {
+            res.status(200)
+            res.render('index', { notes })
+        }
+    },
+    new: function (req, res) {
+        // Note.find({})
+        // .then(notes) =>
+    }
+}
