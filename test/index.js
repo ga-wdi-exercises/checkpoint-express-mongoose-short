@@ -57,16 +57,16 @@ describe("Setup -", () => {
       done()
     })
 
-    it("should have a notes controller at ./controllers/notes.js", done => {
-      let importMessagesController = () => require("../controllers/notes.js")
+    it("should have a quests controller at ./controllers/quests.js", done => {
+      let importMessagesController = () => require("../controllers/quests.js")
 
       // expect(importMessagesController).to.not.throw()
       expect(importMessagesController).not.to.be.undefined
       done()
     })
 
-    it("should have a Note model inside ./models/Note.js", done => {
-      let importModel = () => require("../models/Note")
+    it("should have a Quest model inside ./models/Quest.js", done => {
+      let importModel = () => require("../models/Quest")
       expect(importModel).to.not.throw()
       expect(importModel).not.to.be.undefined
       done()
@@ -75,61 +75,72 @@ describe("Setup -", () => {
 })
 
 describe("Model -", () => {
-  let Note
+  let Quest
   let app
 
   before(done => {
-    Note = require("../models/Note")
+    Quest = require("../models/Quest")
     app = require("../index.js")
     done()
   })
 
   beforeEach(done => {
-    Note.remove({}).then(() => {
+    Quest.remove({}).then(() => {
       done()
     })
   })
 
   afterEach(done => {
-    Note.remove({}).then(() => {
+    Quest.remove({}).then(() => {
       done()
     })
   })
 
-  it("should have a Note model", done => {
-    expect(Note).not.to.be.undefined
+  it("should have a Quest model", done => {
+    expect(Quest).not.to.be.undefined
     done()
   })
 
   it("should have a title property on the model", done => {
-    expect(Note.schema.obj).to.have.property("title")
+    expect(Quest.schema.obj).to.have.property("title")
     done()
   })
 
   it("should have an author property on the model", done => {
-    expect(Note.schema.obj).to.have.property("author")
+    expect(Quest.schema.obj).to.have.property("quest_giver")
     done()
   })
 
   it("should have an body property on the model", done => {
-    expect(Note.schema.obj).to.have.property("body")
+    expect(Quest.schema.obj).to.have.property("rewards")
     done()
   })
 
-  it("should be able to create a Note", done => {
-    Note.create({
-      author: "Winnie The Pooh",
-      title: "An important note",
-      body: "Honey!"
-    }).then(note => {
-      expect(note).not.to.be.undefined
-      expect(note).to.be.an("object")
-      expect(note.body).not.to.be.undefined
-      expect(note.title).not.to.be.undefined
-      expect(note.author).not.to.be.undefined
-      expect(note.body).to.be.a("string")
-      expect(note.title).to.be.a("string")
-      expect(note.author).to.be.a("string")
+  it("should have an body property on the model", done => {
+    expect(Quest.schema.obj).to.have.property("locations")
+    done()
+  })
+
+  it("should be able to create a Quest", done => {
+    Quest.create({
+      "title": "Taking Care of Business",
+      "quest_giver": "Brynjolf",
+      "rewards": ["Thieves Guild Outfit", "Fence"],
+      "locations": ["Riften"]
+    }).then(quest => {
+      expect(quest).not.to.be.undefined
+      expect(quest).to.be.an("object")
+
+      expect(quest.quest_giver).not.to.be.undefined
+      expect(quest.title).not.to.be.undefined
+      expect(quest.rewards).not.to.be.undefined
+      expect(quest.locations).not.to.be.undefined
+
+
+      expect(quest.title).to.be.a("string")
+      expect(quest.quest_giver).to.be.a("string")
+      expect(quest.rewards).to.be.a("array")
+      expect(quest.locations).to.be.a("array")
       done()
     })
   })
@@ -138,27 +149,28 @@ describe("Model -", () => {
 describe("Routes -", () => {
   this.timeout = 1000
 
-  let Note
+  let Quest
   let app
 
   before(done => {
-    Note = require("../models/Note")
+    Quest = require("../models/Quest")
     app = require("../index.js")
     done()
   })
 
   beforeEach(done => {
-    Note.remove({}).then(() => {
-      Note.create({
-        author: "Winnie The Pooh",
-        title: "An important note",
-        body: "Honey!"
+    Quest.remove({}).then(() => {
+      Quest.create({
+        "title": "House of Horrors",
+        "quest_giver": "Vigilant Tyranus",
+        "rewards": ["Abandoned House (Markarth)"],
+        "locations": ["Abandoned House"]
       }).then(() => done())
     })
   })
 
   afterEach(done => {
-    Note.remove({}).then(() => done())
+    Quest.remove({}).then(() => done())
   })
 
   describe("A GET request for the homepage ('/')", () => {
@@ -173,28 +185,30 @@ describe("Routes -", () => {
         })
     })
 
-    it("should include a list of Notes with author and titles displayed", done => {
-      Note.find({}).then(notes => {
-        let note = notes[0]
+    it("should include a list of Quests with quest_givers, titles, rewards and locations displayed", done => {
+      Quest.find({}).then(quests => {
+        let quest = quests[0]
         chai
           .request(app)
           .get("/")
           .end((err, res) => {
-            expect(res.text).to.contain(note.author)
-            expect(res.text).to.contain(note.title)
+            expect(res.text).to.contain(quest.title)
+            expect(res.text).to.contain(quest.quest_giver)
+            expect(res.text).to.contain(quest.rewards)
+            expect(res.text).to.contain(quest.locations)
             done()
           })
       })
     })
   })
 
-  describe("GET show view for Note ('/notes/:id')", () => {
+  describe("GET show view for Quest ('/quest/:id')", () => {
     it("should return a successful response 200", done => {
-      Note.findOne({}).then(note => {
-        console.log(note)
+      Quest.findOne({}).then(quest => {
+        console.log(quest)
         chai
           .request(app)
-          .get(`/notes/${note._id}`)
+          .get(`/quest/${quest._id}`)
           .end((err, res) => {
             expect(res).to.have.status(200)
             done()
@@ -202,15 +216,15 @@ describe("Routes -", () => {
       })
     })
 
-    it("should include the fields of a Note", done => {
-      Note.findOne({}).then(note => {
+    it("should include the fields of a Quest", done => {
+      Quest.findOne({}).then(quest => {
         chai
           .request(app)
-          .get(`/notes/${note._id}`)
+          .get(`/quest/${quest._id}`)
           .end((err, res) => {
-            expect(res.text).to.contain(note.author)
-            expect(res.text).to.contain(note.title)
-            expect(res.text).to.contain(note.body)
+            expect(res.text).to.contain(quest.quest_giver)
+            expect(res.text).to.contain(quest.title)
+            expect(res.text).to.contain(quest.rewards)
             done()
           })
       })

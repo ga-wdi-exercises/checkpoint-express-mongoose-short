@@ -1,0 +1,30 @@
+
+<div>
+    More Info About : <a href={{"https://skyrim.gamepedia.com/" + {{quest.title}}> {{quest.title}} </a>
+    {{!-- <li class="no-style-li">{{quest.title}}</li>
+    <li class="no-style-li">{{quest.author}}</li>
+    <li class="no-style-li">{{quest.body}}</li> --}}
+
+    <div>
+        <li class="inline">
+          Quest Giver: {{quest.quest_giver}}
+         </li>
+      </div>
+     
+       <div>
+        Rewards For Completion:
+        {{#each quest.rewards}}
+          {{> reward this}}
+        {{/each}}
+       </div>
+      
+       <div>
+        Locations of Quest:
+          {{#each quest.locations}}
+            {{> location this}}
+          {{/each}}
+        </div>
+    </div>
+
+
+</div>

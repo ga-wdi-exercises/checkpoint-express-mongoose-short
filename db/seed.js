@@ -1,9 +1,9 @@
-const Note = require('../models/Note')
+const Quest = require('../models/Quest')
 const seedData = require('./seeds.json')
 
-Note.remove({})
+Quest.remove({})
   .then(() => {
-    return Note.collection.insert(seedData)
+    return Quest.collection.insert(seedData)
   })
   .then(() => {
     process.exit()
