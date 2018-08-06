@@ -10,10 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "better-express-errors": "^1.0.2",
-    "express": "^3.0.1",
-    "hbs": "^4.0.1",
-    "mongoose": "^5.2.5"
   },
   "devDependencies": {
     "chai": "*",

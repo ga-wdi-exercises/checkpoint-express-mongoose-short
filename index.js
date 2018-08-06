@@ -1,33 +1,23 @@
-const express = require('express')
-const hbs = require('hbs')
-const questsController = require("./controllers/quests")
-const Notes = require("./models/Quest")
-const app = express()
-const router = express.Router()
+// partials can be used to complete this checkpoint, they are not required though. in order to use partials you can use hbs to register the partials directory
+// partials have been provided in views/partials/
 
 
-
-app.set('views', __dirname + '/views');
-app.set("view engine", "hbs")
-app.use(express.static("public"));
-hbs.registerPartials(__dirname + "/views/partials");
-
-
+//the below routes can be used or changed as you see fit
 app.get("/", (req, res) => {
-  res.redirect('/quests')
+ res.send('this should redirect to the /quests route')
 })
 
-app.get("/quests", questsController.index)
-// app.get("/quests", (req, res) => {
-//   res.send('test2')
-// })
+app.get("/quests", (req, res) => {
+  res.send('this should show all the quests')
+})
 
+app.get("/quest/:id", (req, res) => {
+  res.send('this should show a single quest')
+})
 
-app.get("/quest/:id", questsController.show)
 
 app.listen(3000, () => console.log('app is running'))
-app.use(require("better-express-errors")(app))
-
 
 // DO NOT REMOVE THIS LINE:
 module.exports = app
+
