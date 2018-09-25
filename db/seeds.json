@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Forbidden Legend",
+    "quest_giver": "Lost Legends",
+    "rewards": ["The Gauldur Amulet", "Staff of Jyrik Gauldurson", "Gauldur Blackblade", "Gauldur Blackbow"],
+    "locations": ["Folgunthur", "Saarthal", "Geirmund's Hall", "Reachwater Rock"]
+  },
+  {
+    "title": "Taking Care of Business",
+    "quest_giver": "Brynjolf",
+    "rewards": ["Thieves Guild Outfit", "Fence"],
+    "locations": ["Riften"]
+  },
+  {
+    "title": "House of Horrors",
+    "quest_giver": "Vigilant Tyranus",
+    "rewards": ["Abandoned House (Markarth)"],
+    "locations": ["Abandoned House"]
+  },
+  {
+    "title": "Unbound",
+    "quest_giver": "N/A",
+    "rewards": ["Freedom", "Salvaged loot", "Progress in storyline"],
+    "locations": ["Helgen"]
+  }
+]

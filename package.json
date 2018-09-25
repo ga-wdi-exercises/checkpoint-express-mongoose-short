@@ -9,10 +9,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "chai": "*",
     "chai-http": "^3.0.0",
+    "express": "^4.13.4",
     "mocha": "*",
     "mocha-junit-reporter": "*"
   }

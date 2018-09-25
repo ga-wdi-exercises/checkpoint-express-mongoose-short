@@ -1,0 +1,21 @@
+.inline {
+  display: inline;
+}
+
+.no-style-li {
+  list-style-type: none;
+}
+
+.quest {
+  border: 2px solid black;
+  margin: 2vh 1vw;
+  padding: 3vh 4vw;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
