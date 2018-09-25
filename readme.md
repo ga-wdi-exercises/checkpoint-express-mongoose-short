@@ -23,7 +23,7 @@ To run the tests in the terminal, run `npm test`.
 For this checkpoint, you need to build a simple application for tracking Notes.
 
 ### Requirements
-
+ 
 1. There is already a `package.json` file with the dependencies necessary for running the tests. Install everything else required to build your application server with Express, Mongoose, and Handlebars (use `hbs` instead of `express-handlebars`).
 
 2. Create the following directories `controllers` and `views`. The names must match these exactly, so be careful to pluralize.
