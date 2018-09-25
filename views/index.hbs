@@ -1,0 +1,11 @@
+<h1>Notes{{author}}</h1>
+{{#if notes}}
+<ul>
+    {{#each notes}}
+<li>
+    <a href="/views/show{{id}}">{{title}}{{body}}{{author}}</a>
+    
+</li>
+{{/each}}
+</ul>
+{{/if}}
