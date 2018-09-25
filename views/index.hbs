@@ -1,0 +1,10 @@
+{{#if notes}}
+<ul>
+  {{#each notes}}
+  <li>
+    <h1><a href="/notes/{{id}}">{{title}}</a></h1>
+    <p>{{author}}</p>
+  </li>
+  {{/each}}
+</ul>
+{{/if}}
