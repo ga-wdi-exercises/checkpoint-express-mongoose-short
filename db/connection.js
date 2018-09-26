@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/notes");
+mongoose.connect("mongodb://localhost/notes",  { useNewUrlParser: true });
 
 mongoose.Promise = Promise;
 

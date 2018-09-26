@@ -1,7 +1,0 @@
-
-
-model.exports = {
-    index: (req, res) => {
-
-    }
-}

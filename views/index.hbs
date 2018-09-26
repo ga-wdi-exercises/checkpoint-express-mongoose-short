@@ -1,7 +1,10 @@
-<h1> {{title}} </h1>
+{{#each anyNote}}
+<h1><a href="/notes/{{id}}">{{author}}</a></h1>
 
-<p> {{author}} </p>
+<h3> {{title}} </h3>
 
 <br>
 
-<p> {{note}} </p>
+{{/each}}
+
+{{!-- <p> {{note}} </p> --}}
