@@ -1,0 +1,9 @@
+<h1>Hi Hello There For CheckPoint 2</h1>
+
+
+{{#each notes}}
+<h1>Author: <a href="note/{{this.id}}">{{author}}</a></h1>
+<h2>Title: {{title}} </h2>
+{{!-- <h2>Body: {{body}} </h2> --}}
+<h2 class="tweet__date">{{ createdAt }}</h2>
+{{/each}}
