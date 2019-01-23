@@ -14,7 +14,7 @@ module.exports = {
     show: (req, res) => {
         Note.findOne({ _id: req.params.id })
         .then(note => {
-            res.rener('show', { note })
+            res.render('show', { note })
         })
     },
 }
