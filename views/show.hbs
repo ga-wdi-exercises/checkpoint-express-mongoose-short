@@ -1,0 +1,10 @@
+{{#if notes}}
+  <ul class="notes-class">
+    {{#each notes}}
+       {{!-- {{> 'note'}} --}}
+       {{Note.title}}
+       {{Note.body}}
+       {{Note.author}}
+    {{/each}}
+  </ul>
+{{/if}}
