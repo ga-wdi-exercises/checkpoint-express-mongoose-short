@@ -9,7 +9,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "handlebars": "^4.0.12",
+    "mongoose": "^5.4.6"
+  },
   "devDependencies": {
     "chai": "*",
     "chai-http": "^3.0.0",
