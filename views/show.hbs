@@ -1,0 +1,24 @@
+{{title}}
+{{#if notes}}
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    {{#each notes}}
+    <tbody>
+        <li>
+        <tr>
+            <td><a href="/notes/{{_id}}">{{title}}</a></td>
+            <td>{{author}}</td>
+            <td>{{body}}</td>
+        </tr>
+        </li>
+        
+    </tbody>
+    {{/each}}
+</table>
+{{/if}}
