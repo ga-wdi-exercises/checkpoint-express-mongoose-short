@@ -1,6 +1,7 @@
 const mongoose = require('../db/connection')
+const Schema = mongoose.Schema
 
-const Note = new mongoose.Schema({
+const Note = new Schema({
 	author: {
 		type: Schema.Types.ObjectId,
 		ref: "User" 
