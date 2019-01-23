@@ -1,4 +1,4 @@
-const note = require('../models/note')
+const Note = require('../models/note')
 const db = require('../connection.js')
 
 module.exports = {
@@ -8,11 +8,11 @@ module.exports = {
     },
 
     list: (req,res) => { 
-        db.find().then( (list => res.render(list)))
+        db.find(Note).then( (list => res.render('../views/index', list)))
     }, 
 
     find: (req,res) => {
-        db.find(req.someParameter).then ( array => res.render(array))
+        db.find(Note.someParameter).then ( note => res.render('../views/show', note))
     }
 
 }
