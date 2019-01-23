@@ -1,4 +1,4 @@
-const Notes = require('../models/noteModels')
+const Notes = require('../models/notes')
 
 module.exports = {
     redirect: (req, res) => {
