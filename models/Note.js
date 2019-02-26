@@ -1,6 +1,10 @@
 const mongoose = require('../db/connection')
 
-const Note = new mongoose.Schema({})
+const Note = new mongoose.Schema({
+    author: String,
+    title: String
+});
+
 
 module.exports = mongoose.model('Note', Note)
 

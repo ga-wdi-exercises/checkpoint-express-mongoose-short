@@ -24,11 +24,11 @@ For this checkpoint, you need to build a simple application for tracking Notes.
 
 ### Requirements
 
-1. There is already a `package.json` file with the dependencies necessary for running the tests. Install everything else required to build your application server with Express, Mongoose, and Handlebars (use `hbs` instead of `express-handlebars`).
+<!-- 1. There is already a `package.json` file with the dependencies necessary for running the tests. Install everything else required to build your application server with Express, Mongoose, and Handlebars (use `hbs` instead of `express-handlebars`). -->
 
-2. Create the following directories `controllers` and `views`. The names must match these exactly, so be careful to pluralize.
+<!-- 2. Create the following directories `controllers` and `views`. The names must match these exactly, so be careful to pluralize. -->
 
-3. There will be a single model, `Note`, with three fields: an `author`, a `title` and a `body`. Each field expects a string value.
+<!-- 3. There will be a single model, `Note`, with three fields: an `author`, a `title` and a `body`. Each field expects a string value. -->
 
 4. You should have 3 routes...
   - `GET '/'` which should redirect to `/notes'
