@@ -1,9 +1,8 @@
-<h1>Notes</h1>
 <ul>
   {{#each notes}}
   <li>
-    <a href="/notes/{{id}}">{{title}}</a>
-    <p>{{author}}</p>
+    <p>Title: <a href="/notes/{{id}}">{{title}}</a></p>
+    <p>Author: {{author}}</p>
   </li>
   {{/each}}
 </ul>
