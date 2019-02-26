@@ -4,3 +4,5 @@ const noteController = require("../controllers/note");
 
 router.get("/notes", noteController.getNotes);
 router.get("/notes/:id", noteController.getNoteByID);
+
+module.exports = router;
