@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 
 app.set("view engine", "hbs");
+app.use(require("./routes/note"));
 
 /*
 GET '/' which should redirect to `/notes'
@@ -13,15 +14,14 @@ name in the description, and the tests will pass if you name it something else.
 
 app.get("/", (req, res) => {
   res.render("index");
-  //res.redirect("/notes");
 });
 
 app.get("/notes", (req, res) => {
-  res.render("index", { notes });
+  res.render("index", { note });
 });
 
-app.get("/notes/:id", (req, res) => {
-  res.render("index", { name: req.params.name, note });
+app.get("/notes/id", (req, res) => {
+  res.render("index", { id: req.params.id, note });
 });
 
 app.listen(3000, () => console.log("app is running"));
