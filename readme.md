@@ -28,12 +28,12 @@ For this checkpoint, you need to build a simple application for tracking Notes.
 
 2. Create the following directories `controllers` and `views`. The names must match these exactly, so be careful to pluralize.
 
-3. There will be a single model, `Note`, with three fields: an `author`, a `title` and a `body`.
+3. There will be a single model, `Note`, with three fields: an `author`, a `title` and a `body`. Each field expects a string value.
 
 4. You should have 3 routes...
   - `GET '/'` which should redirect to `/notes'
   - `GET '/notes'` which render view with a list of notes
-  - `GET '/notes/:someParameter'` where `:someParameter` can be used to identify or grab a single `Note` from the database.
+  - `GET '/notes/:someParameter'` where `:someParameter` can be used to identify or grab a single `Note` from the database. _Note:_ `:someParameter` is an arbitrary placeholder name in the description, and the tests will pass if you name it something else.
 
 5. Your application should have the following views...
 
