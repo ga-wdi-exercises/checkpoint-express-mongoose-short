@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "hbs": "^4.0.2"
+    "express": "^4.16.4",
+    "hbs": "^4.0.2",
+    "mongoose": "^5.4.15"
   },
   "devDependencies": {
     "chai": "*",
