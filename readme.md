@@ -4,7 +4,7 @@ You may use lesson plans for guidance during this checkpoint, such as the [Expre
 
 ## Set Up
 
-Fiork and clone this repository. After cloning down **your fork**...
+Fork and clone this repository. After cloning down **your fork**...
 
 ```bash
  $ cd checkpoint-express-mongoose-short
