@@ -10,7 +10,7 @@ app.get("/", function(req,res){
 
 app.get("/notes", router.index)
 
-app.get("notes/:id", router.show)
+app.get("/notes/:id", router.show)
 
 
 app.listen(3000, () => console.log('app is running'))

@@ -1,10 +1,9 @@
 module.exports = {
     index: function(req,res){
-        res.send("hello all notes")
+        res.render("index")
     },
 
     show: function(req,res){
-        res.send("hello single note")
+        res.render("show")
     }
-
 }
