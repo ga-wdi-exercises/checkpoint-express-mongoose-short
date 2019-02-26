@@ -1,13 +1,11 @@
-<h1>Showing one particular note's info</h1>
 
 {{#if note}}
-note info
-<p>{{note.title}}</p>
-<p>by {{note.author}}</p>
+<h1>{{note.title}}</h1>
+<h3>by {{note.author}}</h3>
 <p>{{note.body}}</p>
 
 {{else}}
-No notes
+No note here!
 
 {{/if}}
 

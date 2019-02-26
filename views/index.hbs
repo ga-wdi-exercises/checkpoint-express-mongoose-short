@@ -1,11 +1,11 @@
-<h1>Showing most recently published notes</h1>
+<h1>Notes</h1>
 
 {{#if notes}}
-notes!
+Here are some of the most recent notes:
 
 <ul>
     {{#each notes as  |note|}}
-        <li>{{note.title}} by {{note.author}}</li>
+        <li><a href="/notes/{{note._id}}">{{note.title}}</a> by {{note.author}}</li>
     {{/each}}
 </ul>
 {{else}}
