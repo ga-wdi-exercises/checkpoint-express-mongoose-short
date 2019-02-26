@@ -9,7 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "hbs": "^4.0.2"
+  },
   "devDependencies": {
     "chai": "*",
     "chai-http": "^3.0.0",
