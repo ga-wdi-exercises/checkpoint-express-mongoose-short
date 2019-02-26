@@ -5,13 +5,13 @@ const Note = new mongoose.Schema({
     title: String
 });
 
-app.get('/:id',(req,res)=> {
-    Note.findOne({ _id:req.params.id })
-    .then(note => {
-        res.render('note/show', note);
-    })
-    .catch(err => console.log(err)
-)});
+// app.get('/:id',(req,res)=> {
+//     Note.findOne({ _id:req.params.id })
+//     .then(note => {
+//         res.render('note/show', notes);
+//     })
+//     .catch(err => console.log(err)
+// )});
 
 module.exports = mongoose.model('Note', Note)
 

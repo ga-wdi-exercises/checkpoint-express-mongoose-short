@@ -1,9 +1,7 @@
-const router = require('express');
-
-router.get('/', (req, res) => {
-    notes.find({})
-        .then(notes =>{
-            res.render('index', { notes });
-        })
-        .catch(err => console.log(err))
-    });
+// router.get('/', (req, res) => {
+//     notes.find({})
+//         .then(note =>{
+//             res.render('index', { note });
+//         })
+//         .catch(err => console.log(err))
+//     });
