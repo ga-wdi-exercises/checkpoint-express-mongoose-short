@@ -1,3 +1,14 @@
 <h1>Showing one particular note's info</h1>
 
+{{#if note}}
+note info
+<p>{{note.title}}</p>
+<p>by {{note.author}}</p>
+<p>{{note.body}}</p>
+
+{{else}}
+No notes
+
+{{/if}}
+
 <p><a href="/notes">Back to home</a></p>

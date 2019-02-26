@@ -1,1 +1,14 @@
 <h1>Showing most recently published notes</h1>
+
+{{#if notes}}
+notes!
+
+<ul>
+    {{#each notes as  |note|}}
+        <li>{{note.title}} by {{note.author}}</li>
+    {{/each}}
+</ul>
+{{else}}
+No notes have been published!
+
+{{/if}}
