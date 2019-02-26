@@ -1,0 +1,12 @@
+<div class="container">
+    {{#if notes}}
+    <div>
+        {{#each notes}}
+        <div>
+            <a href="/notes/{{id}}">Title: {{title}}</a>
+            <p>Author: {{author}}</p>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+</div>
