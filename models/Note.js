@@ -1,5 +1,5 @@
 const mongoose = require('../db/connection')
 
-const Note = new mongoose.Schema({})
+const noteSchema = new mongoose.Schema({})
 
-module.exports = mongoose.model('Note', Note)
+module.exports = mongoose.model('Note', noteSchema)
