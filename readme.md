@@ -65,6 +65,7 @@ For this checkpoint, you need to build a simple application for tracking Notes.
 - If your tests time-out, don't exit, try hitting `ctrl-c`.
 - Pay attention to when you're returning single values versus multiple values.
   The tests will only pass for the appropriate types.
+- You don't need to create any data in the database for the tests to pass. 
 - If something doesn't work, try reordering it.
 - Test with postman!
 - Do not modify the tests in `tests/index.js`!
