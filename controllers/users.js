@@ -10,7 +10,9 @@ router.get("/", (req,res) =>{
 })
 
 router.get("/:someParameter", (req, res) => {
-    User.find({"-id": req.params.someParameter}).then(notes =>{
+    User.find({"_id": req.params.someParameter}).then(notes =>{
         res.json(notes)
     })
 })
+
+module.exports = router
