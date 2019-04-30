@@ -13,7 +13,11 @@ router.get("/users/:id", (req, res) => {
       .then(finduser => res.json(finduser))
   })
 
-
+//tried this and it didnt give me a correct reponse
+//   router.get("/:id", (req, res) => {
+//     User.find({ _id: req.params.id })
+//       .then(finduser => res.json(finduser))
+//   })
 
 
 module.exports = router
