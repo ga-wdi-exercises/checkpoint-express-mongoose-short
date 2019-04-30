@@ -1,3 +1,7 @@
+const express = require('express')
+
+const app = express()
+
 const chai = require("chai")
 const expect = require("chai").expect
 const http = require("chai-http")
@@ -279,3 +283,6 @@ describe("Routes -", () => {
     })
   })
 })
+
+
+app.listen(4000, () => console.log('Server running on port 4000!'))
