@@ -37,23 +37,29 @@ For this checkpoint, you need to build a simple application for tracking Notes.
 
 4. Create two models:
 
-- `Note`, with three fields
-  - `title`
-  - `body`
-  - a ref called `author` to `User`. This should be a plain object.
-- `User`, with three fields
-  - `username`
-  - `email`
-  - a ref called `notes` to `Note`. This should be an array of objects.
+   A. `Note`, with three fields
+
+   - `title`
+   - `body`
+   - a ref called `author` to `User`. A note will only be associated with a
+     single user, so this should be a plain object.
+
+   B. `User`, with three fields
+
+   - `username`
+   - `email`
+   - a ref called `notes` to `Note`. This should be an array of objects.
 
 5. You should have 5 routes. They should return JSON unless otherwise specified.
 
 - `GET '/'` which should redirect to `/notes'
 - `GET '/notes'` which return a list of notes
 - `GET '/notes/:someParameter'` where `:someParameter` grabs a single `Note`
-  from the database by id.
+  from the database by id. **NOTE** You can name `:someParameter` whatever you
+  want 😬
 - `GET '/users'` which will return a list of all users
-- `GET '/users/:someParameter` which will return a single user by id
+- `GET '/users/:someParameter` which will return a single user by id. **NOTE**
+  see previous note.
 
 **NOTES:**
 
@@ -65,7 +71,7 @@ For this checkpoint, you need to build a simple application for tracking Notes.
 - If your tests time-out, don't exit, try hitting `ctrl-c`.
 - Pay attention to when you're returning single values versus multiple values.
   The tests will only pass for the appropriate types.
-- You don't need to create any data in the database for the tests to pass. 
+- You don't need to create any data in the database for the tests to pass.
 - If something doesn't work, try reordering it.
 - Test with postman!
 - Do not modify the tests in `tests/index.js`!
