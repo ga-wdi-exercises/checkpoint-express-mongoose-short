@@ -7,10 +7,8 @@ const app = express();
 app.use(parser.urlencoded({ extended: true }));
 app.use(parser.json());
 
-app.get("/", (req,res) => {res.redirect("/api/notes")})
-
-app.use("/api/notes/", notesController);
-app.use("/api/users/", usersController);
+app.use("/", notesController);
+app.use("/", usersController);
 
 app.listen(3000, () => console.log('app is running'))
 
