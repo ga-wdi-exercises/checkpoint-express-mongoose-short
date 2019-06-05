@@ -1,13 +1,14 @@
 const mongoose = require('../db/connection')
 
 const userSchema = new mongoose.Schema({
-    user: {
+    username: {
         type: String,
         trim: true
     },
     email: String,
     notes: {
-
+        ref: "Note",
+        type: mongoose.Schema.Types.ObjectId
     }
 })
 
@@ -20,5 +21,6 @@ email
 a ref called notes to Note. This should be an array of objects. 
 
 */
-
-module.exports = mongoose.model('User', userSchema)
+let User = mongoose.model('User', userSchema)
+module.exports = User
+    // module.exports = mongoose.model('User', userSchema)
