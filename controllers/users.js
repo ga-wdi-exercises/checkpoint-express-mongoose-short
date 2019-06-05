@@ -8,7 +8,7 @@ router.get("/users", (req,res) => {
 })
 
 router.get("/users/:_id", (req,res) => {
-    Note.findOne({ id: req.params._id})
+    User.findOne({ id: req.params._id})
     .then(users => res.json(users))
 })
 
