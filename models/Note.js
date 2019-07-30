@@ -1,5 +1,13 @@
-const mongoose = require('../db/connection')
+const mongoose = require('../models/Note.js')
+const Schema =  mongoose.Schema
 
-const noteSchema = new mongoose.Schema({})
+const Note = new Schema ({
+    title : String,
+    body : String,
+    author : {
+        type : Schema.Types.ObjectId,
+        ref: "User"
+    }
+})
 
-module.exports = mongoose.model('Note', noteSchema)
+module.exports = mongoose.model('Note', Schema)
