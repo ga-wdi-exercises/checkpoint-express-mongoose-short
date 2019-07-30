@@ -4,10 +4,10 @@ const app = express();
 
 app.use(parser.json());
 
-// app.use("/api/people", require("./routes/person"));
-// app.use("/api/show", require("./routes/show"));
+app.use("/notes", require("./routes/notes"));
+app.use("/users", require("./routes/users"));
 
-app.listen(3000, () => console.log("app is running"));
+app.listen(4000, () => console.log("app is running"));
 
 // DO NOT REMOVE THIS LINE:
 module.exports = app;
