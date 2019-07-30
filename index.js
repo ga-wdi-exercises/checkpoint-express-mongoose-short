@@ -6,9 +6,8 @@ app.use(parser.json());
 
 
 
-
-app.use("/note", require("./routes/Note"))
-app.use("/user", require("./routes/User"))
+app.use("/users", require("./routes/users"))
+app.use("/", require("./routes/notes"))
 
 
 
