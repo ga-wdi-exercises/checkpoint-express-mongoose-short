@@ -7,7 +7,7 @@ const usersRoute = require('./routes/users');
 
 app.use(parser.json());
 
-
+app.use('/', require('./routes/notes'));
 app.use('/notes', require('./routes/notes'));
 app.use('/users', require('./routes/users'));
 
