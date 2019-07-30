@@ -11,6 +11,7 @@ const userSchema = new mongoose.Schema({
   notes: [
     {
       type: Schema.Types.ObjectId,
+      requried: true,
       ref: "Note"
     }
   ]
