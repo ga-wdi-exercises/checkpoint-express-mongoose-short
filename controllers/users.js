@@ -2,9 +2,9 @@ const User = require('../models/User');
 
 module.exports = {
     showUsers: function (req, res) {
-        Note.find({users: req.params.users}).then(notes => res.json(notes));
+        User.find({}).then(users => res.json(users));
     },
     getUserById: function (req, res) {
-        Note.find({users: req.params.id}).then(notes => res.json(notes));
+        User.findById({_id: req.params.id}).then(users => res.json(users));
     }
 }
