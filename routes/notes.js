@@ -9,14 +9,5 @@ router.get("/notes", notesController.index);
 //to get a note by ID - - not yet set up
 router.get("/:noteId", notesController.show);
 
-
-//these probably not needed
-// router.get("/new", notesController.new);
-// router.post("/", notesController.create);
-// 
-// router.get("/:id/edit", notesController.edit);
-// router.put("/:id", notesController.update);
-// router.destroy("/:id", notesController.destroy);
-
 module.exports = router;
 

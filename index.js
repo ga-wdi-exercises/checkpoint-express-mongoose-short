@@ -8,25 +8,25 @@ app.use(parser.json())
 
 
 //temp app
-app.get("/", function(req, res) {
+// app.get("/", function(req, res) {
   
-  res.send("hello world");
+//   res.send("hello world");
   
-});
+// });
 
 app.use(cors())
 
 // possible first app - redirect to notes - -still crashes nodemon
-// app.get("/", (req, res) => {
-//     res.redirect(“/routes/notes);
-//   });
+app.get("/", (req, res) => {
+    res.redirect("/notes");
+  });
 
 
 
 
 //not yet set up and not sure if needed
-// app.use(“/notes", require("./routes/notes"));
-// app.use(“/users", require("./routes/users"));
+app.get("/notes", require("./routes/notes.js"));
+// app.use("/users", require("./routes/users"));
 
 
 app.listen(3000, () => console.log('app is running'))
