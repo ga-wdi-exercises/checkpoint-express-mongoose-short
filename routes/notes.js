@@ -1,23 +1,22 @@
+const express = require("express");
+const router = express.Router();
+
+const notesController = require("../controllers/notes.js");
+
+//to get list of all notes - - not yet set up
+router.get("/notes", notesController.index);
+
+//to get a note by ID - - not yet set up
+router.get("/:noteId", notesController.show);
 
 
+//these probably not needed
+// router.get("/new", notesController.new);
+// router.post("/", notesController.create);
+// 
+// router.get("/:id/edit", notesController.edit);
+// router.put("/:id", notesController.update);
+// router.destroy("/:id", notesController.destroy);
 
-
-
-
-
-
-
-// const express = require("express");
-// const router = express.Router();
-// const myController = require("../controllers/todo.js");
-
-// router.get("/", myController.index);
-// router.get("/new", myController.new);
-// router.post("/", myController.create);
-// router.get("/:id", myController.show);
-// router.get("/:id/edit", myController.edit);
-// router.put("/:id", myController.update);
-// router.destroy("/:id", myController.destroy);
-
-// module.exports = router;
+module.exports = router;
 
