@@ -1,7 +1,7 @@
 {
   "name": "checkpoint-express-mongoose",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Set Up",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --exit test/*.js"
@@ -9,11 +9,25 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.6.7"
+  },
   "devDependencies": {
     "chai": "*",
     "chai-http": "^4.3.0",
     "mocha": "*",
     "mocha-junit-reporter": "*"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dolocentaur02/checkpoint-express-mongoose-short.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dolocentaur02/checkpoint-express-mongoose-short/issues"
+  },
+  "homepage": "https://github.com/Dolocentaur02/checkpoint-express-mongoose-short#readme"
 }
