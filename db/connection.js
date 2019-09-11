@@ -1,7 +1,19 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose')
 
-mongoose.connect("mongodb://localhost/notes-checkpoint", {useNewUrlParser: true});
 
-mongoose.Promise = Promise;
+mongoose.Promise = Promise
+const mongoURI = "mongodb://localhost/notes-checkpoint"
 
-module.exports = mongoose;
+mongoose
+.connect(mongoURI, { useNewUrlParser: true })
+.then((conn) => {
+	console.log(`connected to mongodb on ${conn.connections[0].name} db`)
+})
+.catch(err => {
+	console.error(err)
+})
+
+
+module.exports = mongoose
+
+
