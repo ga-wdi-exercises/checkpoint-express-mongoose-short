@@ -10,8 +10,8 @@ module.exports = {
   showNotes: (req, res) => {
     Note.findOne({}).then(notes => res.json(notes));
   },
-  showName: (req, res) => {
-    Person.findOne({ author: req.params.username }).then(notes =>
+  emailNotes: (req, res) => {
+    Person.findOne({ author: req.params.email }).then(notes =>
       res.json(notes))
   }
 };

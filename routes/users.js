@@ -6,8 +6,8 @@ const usersController = require('../controllers/users')
 
 router.get("/users", usersController.showUsers);
 
-//Update: update a specific bookmark 
+//find user by name
 
-router.get("/users/:name", usersController.userName);
+router.get("/users/:username", usersController.userName);
 
 module.exports = router; 
