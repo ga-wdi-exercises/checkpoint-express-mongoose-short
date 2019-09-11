@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
+mongoose.Promise = Promise;
+
+const mongoURI = "mongodb://localhost/checkpoint-express";
 
 mongoose.connect("mongodb://localhost/notes-checkpoint", {useNewUrlParser: true});
 
-mongoose.Promise = Promise;
 
 module.exports = mongoose;
