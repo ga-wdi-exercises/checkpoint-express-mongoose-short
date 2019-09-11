@@ -1,15 +1,18 @@
-const Notes = require("../models/Note")
+const Note = require("../models/Note")
 
 module.exports = {
     index:(req,res) => {
         //placeholder
 
-        Note.find({}).then(note => {
-            res.json(note);
+        Note.find({}).then(notes => {
+            res.json(notes);
 
-        }), 
-        show:(req, res) => {
+        });
+    },
+
+    show:(req, res) => {
             Note.findOne({id: req.params.id})
             .then(note => res.json(note))
-        })
+        
     }
+}
