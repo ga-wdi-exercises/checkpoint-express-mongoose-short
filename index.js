@@ -7,10 +7,13 @@ const userRoutes = require('./routes/users');
 
 app.use(parser.urlencoded({extended: true}))
 app.use(parser.json());
-app.use("/notes/", noteRoutes);
-app.use("/users/", userRoutes)
 
+app.use("/notes", noteRoutes);
+app.use("/users", userRoutes);
 
+app.get("/", (req, res) => {
+    res.redirect("/notes");
+});
 
 app.listen(3000, () => console.log('app is running'))
 
