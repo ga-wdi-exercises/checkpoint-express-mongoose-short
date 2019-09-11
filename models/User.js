@@ -1,5 +1,12 @@
 const mongoose = require('../db/connection')
 
-const userSchema = new mongoose.Schema({})
+const userSchema = new mongoose.Schema({
+  username: String,
+  email: String,
+  // Again not sure how to reference a schema in a different file
+  // notes:[Note]
+})
 
-module.exports = mongoose.model('User', userSchema)
+const User = mongoose.model('User',userSchema)
+
+module.exports = User
